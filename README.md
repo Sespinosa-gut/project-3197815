@@ -27,6 +27,6 @@ El propósito de esta aplicación es conectar a personas interesadas en comercia
 
 # 🚀 Estado del proyecto
 
-+ACTIVO
+ACTIVO
 
 ![original_779138a6ca152fa6e1750aa5fe0a96b9](https://github.com/user-attachments/assets/a285c739-8baa-4cad-a3cf-29f6aa0d408d)
