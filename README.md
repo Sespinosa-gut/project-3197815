@@ -1,4 +1,4 @@
-# 🛒Bienvenidos a Proyecto Swap IT™
+# 🛒Bienvenidos a Swap IT™
 
 Bienvenid@ a este proyecto web que tiene como objetivo crear una plataforma digital donde los usuarios puedan **intercambiar**, **rematar** (subastar) y **vender** productos de forma segura, fácil y accesible.
 
