@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Intercambios - Intercambios y Ventas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="gestionestiloglobal.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Intercambios</h1>
+        <nav>
+             <ul>
+                <li><a href="Dashboard.html">Inicio</a></li>
+                <li><a href="gestionar-intercambios.html">Intercambios</a></li>
+                <li><a href="gestionar-ventasyfacturas.html">Ventas</a></li>
+                <li><a href="gestion-inventario.html">Productos</a></li>
+                <li><a href="error404.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="add-exchange">
+            <h2>Registrar Nuevo Intercambio</h2>
+            <form id="exchange-form">
+                <div class="form-group">
+                    <label for="offered-product">Producto Ofrecido:</label>
+                    <input type="text" id="offered-product" name="offered-product" placeholder="Ej: Mi libro 'El Gran Gatsby'" required>
+                </div>
+                <div class="form-group">
+                    <label for="desired-product">Producto Deseado:</label>
+                    <input type="text" id="desired-product" name="desired-product" placeholder="Ej: Tus audífonos Bluetooth" required>
+                </div>
+                <div class="form-group">
+                    <label for="proposer-name">Nombre del Proponente:</label>
+                    <input type="text" id="proposer-name" name="proposer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="proposer-contact">Contacto del Proponente:</label>
+                    <input type="text" id="proposer-contact" name="proposer-contact" placeholder="Email o teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label for="exchange-date">Fecha de Propuesta:</label>
+                    <input type="date" id="exchange-date" name="exchange-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="exchange-status">Estado del Intercambio:</label>
+                    <select id="exchange-status" name="exchange-status">
+                        <option value="pendiente">Pendiente</option>
+                        <option value="aceptado">Aceptado</option>
+                        <option value="rechazado">Rechazado</option>
+                        <option value="completado">Completado</option>
+                        <option value="cancelado">Cancelado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exchange-notes">Notas Adicionales:</label>
+                    <textarea id="exchange-notes" name="exchange-notes" rows="3"></textarea>
+                </div>
+                <button type="submit">Registrar Intercambio</button>
+            </form>
+        </section>
+
+        <section id="exchange-list">
+            <h2>Intercambios Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto Ofrecido</th>
+                        <th>Producto Deseado</th>
+                        <th>Proponente</th>
+                        <th>Contacto</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Notas</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Libro "100 Años de Soledad"</td>
+                        <td>Juego de Mesa "Catan"</td>
+                        <td>Ana García</td>
+                        <td>ana.g@example.com</td>
+                        <td>2025-07-01</td>
+                        <td>Pendiente</td>
+                        <td>Propuesta inicial.</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Laptop Dell Usada</td>
+                        <td>Tablet Samsung Nueva</td>
+                        <td>Carlos López</td>
+                        <td>+57 310 123 4567</td>
+                        <td>2025-06-28</td>
+                        <td>Aceptado</td>
+                        <td>Esperando coordinación de entrega.</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Swap it Dashboard. Todos los derechos reservados.</p>
+    </footer>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos - Intercambios y Ventas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="gestionestiloglobal.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos</h1>
+        <nav>
+            <ul>
+                <li><a href="Dashboard.html">Inicio</a></li>
+                <li><a href="gestionar-intercambios.html">Intercambios</a></li>
+                <li><a href="gestionar-ventasyfacturas.html">Ventas</a></li>
+                <li><a href="gestion-inventario.html">Productos</a></li>
+                <li><a href="error404.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="add-product">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-name">Nombre del Producto:</label>
+                    <input type="text" id="product-name" name="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-description">Descripción:</label>
+                    <textarea id="product-description" name="product-description" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-quantity">Cantidad en Stock:</label>
+                    <input type="number" id="product-quantity" name="product-quantity" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Precio (si aplica):</label>
+                    <input type="number" id="product-price" name="product-price" step="0.01" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Categoría:</label>
+                    <input type="text" id="product-category" name="product-category">
+                </div>
+                <div class="form-group">
+                    <label for="product-type">Tipo de Oferta:</label>
+                    <select id="product-type" name="product-type">
+                        <option value="intercambio">Solo Intercambio</option>
+                        <option value="venta">Solo Venta</option>
+                        <option value="ambos">Intercambio y Venta</option>
+                    </select>
+                </div>
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <section id="product-list">
+            <h2>Productos en Catálogo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                        <th>Tipo de Oferta</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cámara Fotográfica Vintage</td>
+                        <td>Canon AE-1, buen estado, funciona.</td>
+                        <td>1</td>
+                        <td>$150.00</td>
+                        <td>Electrónica</td>
+                        <td>Intercambio y Venta</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Colección de Cómics (Vol. 1-5)</td>
+                        <td>Serie completa, edición de lujo.</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>Libros y Cómics</td>
+                        <td>Solo Intercambio</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Auriculares Inalámbricos Sony</td>
+                        <td>Nuevos, sellados en caja.</td>
+                        <td>3</td>
+                        <td>$80.00</td>
+                        <td>Electrónica</td>
+                        <td>Solo Venta</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Swap it Dashboard. Todos los derechos reservados.</p>
+    </footer>
+
+</html>

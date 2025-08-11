@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Categorías - Intercambios y Ventas</title>
+    <link rel="stylesheet" href="gestionestiloglobal.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Categorías</h1>
+        <nav>
+             <ul>
+                <li><a href="Dashboard.html">Inicio</a></li>
+                <li><a href="gestionar-intercambios.html">Intercambios</a></li>
+                <li><a href="gestionar-ventasyfacturas.html">Ventas</a></li>
+                <li><a href="gestion-inventario.html">Productos</a></li>
+                <li><a href="error404.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="add-category">
+            <h2>Agregar Nueva Categoría</h2>
+            <form id="category-form">
+                <div class="form-group">
+                    <label for="category-name">Nombre de la Categoría:</label>
+                    <input type="text" id="category-name" name="category-name" placeholder="Ej: Electrónica, Libros, Ropa" required>
+                </div>
+                <div class="form-group">
+                    <label for="category-description">Descripción (Opcional):</label>
+                    <textarea id="category-description" name="category-description" rows="3" placeholder="Breve descripción de los productos en esta categoría"></textarea>
+                </div>
+                <button type="submit">Agregar Categoría</button>
+            </form>
+        </section>
+
+        <section id="category-list">
+            <h2>Categorías Existentes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Electrónica</td>
+                        <td>Smartphones, laptops, auriculares, etc.</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Libros</td>
+                        <td>Novelas, cómics, no ficción, etc.</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ropa y Accesorios</td>
+                        <td>Vestuario, joyas, bolsos, etc.</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Swap it Dashboard. Todos los derechos reservados.</p>
+    </footer>
+
+</html>

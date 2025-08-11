@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Ventas y Facturas - Intercambios y Ventas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="gestionestiloglobal.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Ventas y Facturas</h1>
+        <nav>
+             <ul>
+                <li><a href="Dashboard.html">Inicio</a></li>
+                <li><a href="gestionar-intercambios.html">Intercambios</a></li>
+                <li><a href="gestionar-ventasyfacturas.html">Ventas</a></li>
+                <li><a href="gestion-inventario.html">Productos</a></li>
+                <li><a href="error404.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="record-sale">
+            <h2>Registrar Nueva Venta</h2>
+            <form id="sale-form">
+                <div class="form-group">
+                    <label for="sale-product">Producto Vendido:</label>
+                    <input type="text" id="sale-product" name="sale-product" placeholder="Ej: Audífonos Bluetooth" required>
+                </div>
+                <div class="form-group">
+                    <label for="sale-quantity">Cantidad:</label>
+                    <input type="number" id="sale-quantity" name="sale-quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="sale-price-unit">Precio Unitario:</label>
+                    <input type="number" id="sale-price-unit" name="sale-price-unit" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-name">Nombre del Cliente:</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-contact">Contacto del Cliente:</label>
+                    <input type="text" id="customer-contact" name="customer-contact" placeholder="Email o teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="sale-date">Fecha de Venta:</label>
+                    <input type="date" id="sale-date" name="sale-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Método de Pago:</label>
+                    <select id="payment-method" name="payment-method">
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="transferencia">Transferencia Bancaria</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sale-notes">Notas de la Venta:</label>
+                    <textarea id="sale-notes" name="sale-notes" rows="3"></textarea>
+                </div>
+                <button type="submit">Registrar Venta</button>
+            </form>
+        </section>
+
+        <section id="sales-list">
+            <h2>Historial de Ventas y Facturas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cant.</th>
+                        <th>P. Unitario</th>
+                        <th>Total</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Método Pago</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Auriculares Inalámbricos Sony</td>
+                        <td>1</td>
+                        <td>$80.00</td>
+                        <td>$80.00</td>
+                        <td>Laura Pérez</td>
+                        <td>2025-06-30</td>
+                        <td>Tarjeta</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                            <button class="invoice-btn">Ver Factura</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Teclado Mecánico RGB</td>
+                        <td>1</td>
+                        <td>$120.00</td>
+                        <td>$120.00</td>
+                        <td>Miguel Rojas</td>
+                        <td>2025-06-25</td>
+                        <td>Transferencia Bancaria</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                            <button class="invoice-btn">Ver Factura</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Swap it. Todos los derechos reservados.</p>
+    </footer>
+
+</html>

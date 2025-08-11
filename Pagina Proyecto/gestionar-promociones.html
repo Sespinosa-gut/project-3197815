@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Promociones - Intercambios y Ventas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="gestionestiloglobal.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Promociones</h1>
+        <nav>
+             <ul>
+                <li><a href="Dashboard.html">Inicio</a></li>
+                <li><a href="gestionar-intercambios.html">Intercambios</a></li>
+                <li><a href="gestionar-ventasyfacturas.html">Ventas</a></li>
+                <li><a href="gestion-inventario.html">Productos</a></li>
+                <li><a href="error404.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="add-promotion">
+            <h2>Crear Nueva Promoción</h2>
+            <form id="promotion-form">
+                <div class="form-group">
+                    <label for="promotion-name">Nombre de la Promoción:</label>
+                    <input type="text" id="promotion-name" name="promotion-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="promotion-type">Tipo de Promoción:</label>
+                    <select id="promotion-type" name="promotion-type">
+                        <option value="descuento-porcentaje">Descuento Porcentual (%)</option>
+                        <option value="descuento-fijo">Descuento Fijo ($)</option>
+                        <option value="envio-gratis">Envío Gratis</option>
+                        <option value="2x1">2x1</option>
+                        <option value="kit">Kit / Paquete</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="promotion-value">Valor / Detalle:</label>
+                    <input type="text" id="promotion-value" name="promotion-value" placeholder="Ej: 15% / $10 / 'Comprando A y B, obtén C'">
+                </div>
+                <div class="form-group">
+                    <label for="applicable-products">Productos Aplicables (IDs o Nombres, separados por coma):</label>
+                    <input type="text" id="applicable-products" name="applicable-products" placeholder="Ej: Libro A, Audífono B">
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Fecha de Inicio:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">Fecha de Fin:</label>
+                    <input type="date" id="end-date" name="end-date">
+                </div>
+                <div class="form-group">
+                    <label for="promotion-status">Estado:</label>
+                    <select id="promotion-status" name="promotion-status">
+                        <option value="activa">Activa</option>
+                        <option value="programada">Programada</option>
+                        <option value="finalizada">Finalizada</option>
+                        <option value="cancelada">Cancelada</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="promotion-notes">Notas:</label>
+                    <textarea id="promotion-notes" name="promotion-notes" rows="3"></textarea>
+                </div>
+                <button type="submit">Guardar Promoción</button>
+            </form>
+        </section>
+
+        <section id="promotion-list">
+            <h2>Promociones Activas y Programadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Valor/Detalle</th>
+                        <th>Productos Aplicables</th>
+                        <th>Inicio</th>
+                        <th>Fin</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Oferta Verano Libros</td>
+                        <td>Descuento Porcentual (%)</td>
+                        <td>20%</td>
+                        <td>Libros de Ficción</td>
+                        <td>2025-07-15</td>
+                        <td>2025-08-31</td>
+                        <td>Programada</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Envío Gratis Electrónica</td>
+                        <td>Envío Gratis</td>
+                        <td>Sin costo de envío</td>
+                        <td>Audífonos, Teclados</td>
+                        <td>2025-07-01</td>
+                        <td>2025-07-14</td>
+                        <td>Activa</td>
+                        <td>
+                            <button class="edit-btn">Editar</button>
+                            <button class="delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Swap it Dashboard. Todos los derechos reservados.</p>
+    </footer>
+
+</html>

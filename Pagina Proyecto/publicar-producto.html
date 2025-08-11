@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar Producto - Swap it</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="contenedor navegacion">
+      <a href="Dashboard.html" class="logo">Swap it Dashboard</a>
+      <nav class="enlaces-nav">
+        <a href="dashboardusuario.html">Inicio</a>
+        <a href="gestionar-intercambios.html">Intercambios</a>
+        <a href="gestionar-ventasyfacturas.html">Ventas</a>
+        <a href="gestion-inventario.html">Productos</a>
+        <a href="iniciosesion.html" class="boton boton-primario">Salir</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="hero">
+      <h1>Publicar un nuevo producto</h1>
+      <p>Llena los campos para agregar un producto a la venta.</p>
+    </section>
+
+    <section class="seccion">
+      <form class="tarjeta">
+        <label>Nombre del producto</label><br>
+        <input type="text" placeholder="Ej: Teclado mecánico" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+        
+        <label>Descripción</label><br>
+        <textarea placeholder="Describe el producto..." style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
+
+        <label>Precio</label><br>
+        <input type="number" placeholder="$" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+        <label>Imagen (URL)</label><br>
+        <input type="text" placeholder="https://..." style="width: 100%; padding: 10px; margin-bottom: 20px;"><br>
+
+        <button class="boton boton-primario" type="submit">Publicar producto</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <p>&copy; 2025 Swap it Dashboard. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
