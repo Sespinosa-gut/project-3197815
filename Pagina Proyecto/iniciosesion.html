@@ -112,21 +112,5 @@
     </div>
 </body>
 
- <script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault(); 
 
-    const correo = document.getElementById("login-email").value.trim().toLowerCase();
-    const contrasena = document.getElementById("login-password").value;
-
-    // Simulación simple
-    if (correo === "admin@swapit.com" && contrasena === "admin123") {
-      window.location.href = "Dashboard.html"; 
-    } else if (correo === "usuario@swapit.com" && contrasena === "user123") {
-      window.location.href = "dashboardusuario.html"; 
-    } else {
-      alert("Correo o contraseña incorrectos.");
-    }
-  });
-</script>
 </html>
